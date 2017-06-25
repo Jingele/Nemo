@@ -18,3 +18,15 @@ void display(int *s, int size)
 	printf("\n");
 }
 
+bool less(int *i, int *j)
+{
+	if(*i <= *j)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+

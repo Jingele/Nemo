@@ -7,12 +7,12 @@ void sinker(int *p, int i, int size)
 {
 	while(2*i <= size)
 	{
-		int j = 2*i;//the max of the one child
-		if(j < size && *(p+j) < *(p+j+1))
-		{//the max of the two child;
+		int j = 2*i;//the min of the one child
+		if(j < size && !less(p+j,p+j+1))
+		{//the min of the two child;
 			j++;
 		}
-		if(*(p+j) > *(p+i))
+		if(!less(p+i,p+j))
 		{
 			swap(p+j,p+i);
 			i = j;
@@ -29,11 +29,11 @@ void sink(int *p,int i,int size)
 {
 	while(2*i < size)	
 	{
-		int* pmax = *(p+2*i) >= *(p+2*i+1)? (p+2*i):(p+2*i+1);
-		if(*(p+i) < *pmax)
+		int* pt = less(p+2*i+1,p+2*i)? (p+2*i):(p+2*i+1);
+		if(less(p+i,pt))
 		{
-			swap(pmax,p+i);
-			i = pmax-p;
+			swap(pt,p+i);
+			i = pt-p;
 		}
 		else
 		{
@@ -42,7 +42,7 @@ void sink(int *p,int i,int size)
 	}
 	if(2*i == size) 
 	{//if the node has only one child ?
-		if(*(p+i) < *(p+2*i))
+		if(less(p+i,p+2*i))
 		{
 			swap(p+i,p+2*i);
 		}
@@ -56,7 +56,7 @@ void sink(int *p,int i,int size)
 
 void swin(int *p, int i)
 {
-	while(*(p+i) > *(p+i/2) && i/2 > 0)
+	while(less(p+i/2,p+i) && i/2 > 0)
 	{
 		swap(p+i,p+i/2);
 		i /=2;
@@ -90,8 +90,8 @@ void heap(int *d, int size)
 	}
 	int *t = d;
 
-//	build(p,size);
-	builder(p,size);
+	build(p,size);
+//	builder(p,size);
 	while(size >= 1)
 	{
 		sinker(p,1,size);

@@ -15,9 +15,9 @@ void selector(int *d, int size);
 void insert(int *d, int size);
 
 void shell(int *d, int size);
+void sheller(int *d, int size);
 
 void merge(int *d, int size);
-
 void merger(int *d, int size);
 
 void heap(int *d, int size);

@@ -5,8 +5,11 @@
 #include <stdlib.h>
 #include <math.h>
 
+#include <stdbool.h>
+
 void swap(int *a, int *b);
 void display(int *s, int size);
+bool less(int* i, int* j);
 
 #endif
 
