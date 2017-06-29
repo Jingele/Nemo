@@ -1,0 +1,29 @@
+明天要早起！！！！
+
+今天实现了  二叉搜索输的 层序、前序、中序、后序 的递归 和 非递归 访问：
+
+后序访问，需要引入标记变量flag:
+1. flag ！= 1 访问Stack 中的节点，是为了获得他的 right children， 不要弹出。
+2. flag  ==1  right children 已经访问完，应该弹出这个节点了。
+
+下午 写了 二分查找： low，high ， mid = low + (high-low)/2; 和mid 比较，并缩小范围，需要注意去除 mid 这项。
+
+这两天，对递归有了更深的理解，用好递归，他能把代码变得很优雅！
+
+进制转换： 取余数， 和 除等于 , 压栈；
+二进制可以通过移位运算(>>)来实现。
+
+
+下午学习了 git 的知识：
+git add
+git remote add .... origin
+
+git commit
+
+git stash
+git stash pop
+
+git origin
+
+
+

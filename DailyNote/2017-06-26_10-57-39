@@ -1,0 +1,9 @@
+最大二叉堆的定位
+A binary tree is heap-ordered if the key in each node is larger than or equal to the keys in that node's two childrem(if any).
+
+---> The largest key in a heap-ordered binary is found at the root.
+
+二叉搜索树：
+A binary search tree(BST) is a binary tree where each node has a Comparable key(and an associated value) and satisfies the restriction that the key in any node is larger than the keys in all nodes in that node's left subtree and smaller than the keys in all nodes in that node's right subtree.
+
+---> size(x) = size(x.left) + size(x.right) + 1;

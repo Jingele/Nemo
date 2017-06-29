@@ -1,0 +1,25 @@
+就把今天定义为这一年的开始 2017-06-28，从这里开始。
+
+------------------------------------------------------------------------------------------------
+1. 回苏州的第一次组会
+2. 毕业聚餐
+3. Algorithm 算法，平衡二叉树、红黑树；
+   面试准备，剑指offer
+------------------------------------------------------------------------------------------------
+
+红黑树是如何保证 平衡的？
+
+任意节点的left children 和 right children 的 黑节点的数目相同。
+
+插入的时候：左旋、右旋、翻转
+
+1. If the right child is red and the left children is black, rotate left;
+2. If both the left child and its left child are red, rotate right;
+3. If both children are red, flip colors.
+
+
+红黑树定义：
+1. red links lean left;
+2. No node has two red links connected to it;
+3. The tree has perfect balance: every path from the root to a null link has the same number of black links.
+
