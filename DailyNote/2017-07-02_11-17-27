@@ -1,0 +1,3 @@
+学习图　graph, 　digraph 的连通块　先求出　反转图的拓扑排序　postReverse，然后对所得序列，进行　dfs　并标记marked　数组。
+
+在undirect graph 中，求连通块，是　按数组元素顺序，标记mark的。

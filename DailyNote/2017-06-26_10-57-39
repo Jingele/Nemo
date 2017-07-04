@@ -1,4 +1,4 @@
-最大二叉堆的定位
+最大二叉堆的定义
 A binary tree is heap-ordered if the key in each node is larger than or equal to the keys in that node's two childrem(if any).
 
 ---> The largest key in a heap-ordered binary is found at the root.
